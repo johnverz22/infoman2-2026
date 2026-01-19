@@ -1,0 +1,22 @@
+Another git workflow:
+1. Create GitHub repo
+2. Copy GitHub repo link
+3. Open terminal
+4. Go to Documents directory [cd Documents]
+5. Clone remote repo [git clone <link>]
+6. Open local repo with vscode [code repo-folder]
+7. Enjoy coding!
+
+
+
+Frequent workflow when repo is existing already
+and during every changes:
+1. Update repo from remote [git pull origin main]
+2. Stage [git add .] -> dot means all changes in current dir
+3. Commit [git commit -m "commit message"]
+Note: if first time, need to personalize repo with
+git config user.email "email@lorma.edu"
+git config user.name "username"
+4. Push [git push -u origin main]
+
+To logout: git credential-manager github logout username
