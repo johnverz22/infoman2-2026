@@ -89,7 +89,7 @@ This will create the `users`, `posts`, and `comments` tables inside your `week1_
 
 ### Part 5: Loading the Data
 
-After creating the schema, you need to populate the tables. Add the following `INSERT` statements to the **end** of your `blog_schema_postgres.sql` file and re-run the import command from Step 4.2.
+After creating the schema, you need to populate the tables. Add the following `INSERT` statements to the **end** of your `blog_schema_postgres.sql` file. Add another `5` records for each, and re-run the import command from Step 4.2.
 
 ```sql
 -- Data for the tables
