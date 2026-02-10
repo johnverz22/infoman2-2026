@@ -3,7 +3,6 @@
 ## Query Analysis and Optimization
 
 
-
 ### Scenario 1: The Slow Author Profile Page
 
 **Before Query Plan and Execution times**
@@ -20,11 +19,11 @@ PASTE TERMINAL RESULT
 
 **Analysis Questions:**
 *   What is the primary node causing the slowness in the initial execution plan?
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 *   How can you optimize both the `WHERE` clause filtering and the `ORDER BY` operation with a single change?
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 *   Implement your fix and record the new plan. How much faster is the query now?
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 
 
 ### Scenario 2: The Unsearchable Blog
@@ -43,11 +42,11 @@ PASTE TERMINAL RESULT
 
 **Analysis Questions:**
 *   First, try adding a standard B-Tree index on the `title` column. Run `EXPLAIN ANALYZE` again. Did the planner use your index? Why or why not?
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 *   The business team agrees that searching by a *prefix* is acceptable for the first version. Rewrite the query to use a prefix search (e.g., `database%`).
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 *   Does the index work for the prefix-style query? Explain the difference in the execution plan.
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 
 ### Scenario 3: The Monthly Performance Report
 
@@ -65,13 +64,13 @@ PASTE TERMINAL RESULT
 
 **Analysis Questions:**
 *   This query is not S-ARGable. What does that mean in the context of this query? Why can't the query planner use a simple index on the `date` column effectively?
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 *   Rewrite the query to use a direct date range comparison, making it S-ARGable.
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 *   Create an appropriate index to support your rewritten query.
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 *   Compare the performance of the original query and your optimized version.
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+<u>Place your answer here</u>
 
 ---
 
