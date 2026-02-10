@@ -2,8 +2,6 @@
 
 **Objective:** This activity will test your ability to analyze, diagnose, and optimize slow SQL queries in a PostgreSQL environment. You will use your knowledge of `EXPLAIN`, indexing strategies, and query rewriting to improve the performance of a sample application.
 
-**Scenario:** You are a database administrator tasked with improving the performance of a new blog platform. The initial schema was written for MySQL, and developers have reported that several key features are becoming slow as more data is added. Your job is to prepare the database for production.
-
 The database will be populated with a large dataset:
 *   `authors`: ~500 records (authors.sql)
 *   `posts`: ~10,000 records (posts.sql)
@@ -35,7 +33,7 @@ The initial schema is provided in `schema.sql`. This file uses MySQL-specific sy
 ## Part 2: Query Analysis and Optimization
 
 For each scenario below, you must:
-1.  Run the provided query with `EXPLAIN ANALYZE`.
+1.  Provided query with `EXPLAIN ANALYZE`.
 2.  Capture the execution plan and the total execution time.
 3.  In your analysis, identify the bottleneck (e.g., `Seq Scan` on a large table) and explain *why* the query is inefficient.
 4.  Propose and implement a fix. This will typically involve creating an index or rewriting the query to be S-ARGable.
@@ -44,7 +42,7 @@ For each scenario below, you must:
 
 ### Scenario 1: The Slow Author Profile Page
 
-A user's (pick 1 author) profile page needs to display all their posts (id and title), with the most recent ones first.
+A user's profile (pick 1 author from schema) page needs to display all their posts (id and title), with the most recent ones first.
 
 **Query:**
 ```sql
@@ -69,11 +67,10 @@ The website needs a feature to search for posts by a keyword in the title using 
 *   First, try adding a standard B-Tree index on the `title` column. Run `EXPLAIN ANALYZE` again. Did the planner use your index? Why or why not?
 *   The business team agrees that searching by a *prefix* is acceptable for the first version. Rewrite the query to use a prefix search (e.g., `database%`).
 *   Does the index work for the prefix-style query? Explain the difference in the execution plan.
-*   (Bonus) What feature in PostgreSQL is designed to handle "full-text search" like the original `'%keyword%'` requirement more efficiently?
 
 ### Scenario 3: The Monthly Performance Report
 
-An internal dashboard needs to pull all posts published in a specific January 2015. 
+An internal dashboard needs to pull all posts published in January, 2015. 
 
 **Query:**
 ```sql
@@ -85,20 +82,6 @@ An internal dashboard needs to pull all posts published in a specific January 20
 *   Rewrite the query to use a direct date range comparison, making it S-ARGable.
 *   Create an appropriate index to support your rewritten query.
 *   Compare the performance of the original query and your optimized version.
-
-### Scenario 4: The Author Email Lookup
-
-The system frequently needs to look up an author's details using their unique email address. 
-
-**Query:**
-```sql
---- Provide the query for looking up an author by email
-```
-
-**Analysis Questions:**
-*   When you migrated the schema, did you include a `UNIQUE` constraint on the `email` column in the `authors` table?
-*   Run `\d authors` in `psql` to inspect the table's structure. Does an index on the `email` column already exist? If so, where did it come from?
-*   If an index does not exist, what is the performance of the lookup query? What would you do to fix it?
 
 ---
 
