@@ -17,18 +17,18 @@ This activity will guide you through understanding the impact of database indexe
         *   A column with random string data (e.g., `first_name`, `product_name`).
         *   A column with random numerical data (e.g., `salary`, `price`).
         *   A date column.
-    *   Generate **100,000 (one hundred thousand)** rows. For the "Output type," select **SQL (PostgreSQL)**. Download the generated `.sql` file.
+    *   Generate **10,000 (one hundred thousand)** rows. For the "Output type," select **SQL (PostgreSQL)**. Download the generated `.sql` file.
     *   The generator uses MySQL so make sure to convert the CREATE statement to make it PostgreSQL-compatible
 
 2.  **Create Table and Insert Data:**
     *   Connect to your PostgreSQL database using `psql` or another client.
     *   Create the table you defined in the previous step.
-    *   To quickly insert 1,000,000 records, execute the downloaded SQL script **10 times**. This simulates a large data insertion process.
+    *   To quickly insert 100,000 records, execute the downloaded SQL script **10 times**. This simulates a large data insertion process.
         *   *Tip for `psql` users:* You can run `\i path/to/your/downloaded_file.sql` ten consecutive times.
     *   **Record the total time it takes to complete all 10 insertions.**
 
 3.  **Verify Row Count:**
-    *   Run the following query to ensure you have 1,000,000 rows.
+    *   Run the following query to ensure you have 100,000 rows.
         ```sql
         SELECT COUNT(*) FROM your_table_name;
         ```
