@@ -80,7 +80,7 @@ This activity will guide you through understanding the impact of database indexe
 
 Fill in the following with your recorded measurements.
 
-*   **Initial Data Insertion Time (1,000,000 rows):** \_\_\_\_\_\_\_\_\_\_
+*   **Initial Data Insertion Time (100,000 rows):** \_\_\_\_\_\_\_\_\_\_
 *   **Query Execution Time (Non-Indexed):** \_\_\_\_\_\_\_\_\_\_
 *   **Query Execution Time (Indexed):** \_\_\_\_\_\_\_\_\_\_
 *   **Single Row Insertion Time (With Index):** \_\_\_\_\_\_\_\_\_\_
