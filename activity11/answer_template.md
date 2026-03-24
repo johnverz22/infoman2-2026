@@ -30,6 +30,10 @@
 
 ## Part 2: Querying with MQL Operators
 
+```javascript
+// Provide your insert script here
+db.inventory....
+```
 ### 1. Price Range
 *Find all items priced between $100 and $500 (inclusive).*
 ```javascript
