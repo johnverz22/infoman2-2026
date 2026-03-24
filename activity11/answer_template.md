@@ -2,7 +2,7 @@
 
 ## Part 1: Relational to Document Modeling
 
-### 1. Proposed JSON Schema (`posts` collection)
+### 1. Proposed JSON Schema
 ```json
 // Provide your single document structure here
 {
