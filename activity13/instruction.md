@@ -103,7 +103,9 @@ Identify vehicles that are in **"Maintenance"**.
 The manager wants to check the location of all **Electric** vehicles.
 *   **Stage 1:** Match electric vehicles.
 *   **Stage 2:** Project the `vin` and create two new fields: `lon` and `lat` by extracting them from the `location.coordinates` array. 
-    *   *Hint: Remember array indexing in projection, e.g., `"$location.coordinates"`.*
+    *   *Hint: Remember array indexing in projection, e.g., `"$location.coordinates"`; 
+        `key: { $arrayElemAt: ["$key.anotherKey", 0] }`,
+       *
 *   **Stage 3:** Hide the `location` and `_id` fields.
 
 ### Task 4: The Mastery Challenge (Multi-Stage Complexity)
